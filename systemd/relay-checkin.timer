@@ -1,0 +1,11 @@
+[Unit]
+Description=Run API relay check-ins every day
+
+[Timer]
+OnCalendar=*-*-* 09:15:00 Asia/Shanghai
+Persistent=true
+AccuracySec=1min
+Unit=relay-checkin.service
+
+[Install]
+WantedBy=timers.target

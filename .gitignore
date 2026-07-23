@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+sites.local.json
+__pycache__/
+*.py[cod]
+*.log
+.venv/
+.pytest_cache/
+.idea/
+.vscode/

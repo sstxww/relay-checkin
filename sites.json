@@ -1,0 +1,17 @@
+{
+  "sites": [
+    {
+      "id": "sheapi",
+      "name": "SheApi",
+      "homepage": "https://www.sheapi.top/",
+      "base_url": "https://www.sheapi.top",
+      "checkin_path": "/api/user/checkin",
+      "access_token_env": "SHEAPI_ACCESS_TOKEN",
+      "user_id_env": "SHEAPI_USER_ID",
+      "already_checked_in_messages": [
+        "\u4eca\u65e5\u5df2\u7b7e\u5230",
+        "already checked in"
+      ]
+    }
+  ]
+}
