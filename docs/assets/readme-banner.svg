@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Relay Check-in</title>
+  <desc id="desc">A clean network and checkmark banner for the API relay check-in client.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#062b34"/>
+      <stop offset=".55" stop-color="#0b4a58"/>
+      <stop offset="1" stop-color="#123b68"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5eead4"/>
+      <stop offset="1" stop-color="#7dd3fc"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="420" rx="32" fill="url(#bg)"/>
+  <g opacity=".22" stroke="#99f6e4">
+    <path d="M0 98H1200M0 210H1200M0 322H1200"/>
+    <path d="M180 0V420M420 0V420M660 0V420M900 0V420"/>
+  </g>
+  <g fill="none" stroke="url(#line)" stroke-width="5" opacity=".95">
+    <path d="M755 103L900 210L770 316"/>
+    <path d="M900 210L1060 118"/>
+    <path d="M900 210L1062 308"/>
+  </g>
+  <g fill="#ccfbf1" stroke="#2dd4bf" stroke-width="5" filter="url(#glow)">
+    <circle cx="755" cy="103" r="15"/><circle cx="770" cy="316" r="15"/>
+    <circle cx="900" cy="210" r="20"/><circle cx="1060" cy="118" r="15"/><circle cx="1062" cy="308" r="15"/>
+  </g>
+  <circle cx="900" cy="210" r="73" fill="#052e2b" stroke="#5eead4" stroke-width="6"/>
+  <path d="M866 211l23 24 47-54" fill="none" stroke="#a7f3d0" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="84" y="174" fill="#f0fdfa" font-family="Inter, 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="58" font-weight="760">Relay Check-in</text>
+  <text x="84" y="224" fill="#99f6e4" font-family="Inter, 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="27">轻量、可扩展的 API 中转站每日签到工具</text>
+  <text x="84" y="278" fill="#bae6fd" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="21">Python stdlib · systemd timer · credentials from environment</text>
+</svg>
