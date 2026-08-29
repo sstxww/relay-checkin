@@ -1,6 +1,45 @@
+<p align="center">
+  <img src="docs/assets/readme-banner.svg" alt="Relay Check-in" width="100%" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 3.10+" />
+  <img src="https://img.shields.io/badge/dependencies-standard%20library-0f766e?style=flat-square" alt="Python standard library only" />
+  <img src="https://img.shields.io/badge/scheduler-systemd-2563eb?style=flat-square&logo=linux&logoColor=white" alt="systemd timer" />
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-22c55e?style=flat-square" alt="MIT License" /></a>
+</p>
+
+<p align="center">
+  <a href="#快速开始">快速开始</a> ·
+  <a href="#添加中转站">添加站点</a> ·
+  <a href="CONTRIBUTING.md">参与贡献</a> ·
+  <a href="SECURITY.md">安全说明</a>
+</p>
+
 # Relay Check-in
 
 一个可扩展的 API 中转站每日签到工具。使用系统访问令牌直接发送 HTTP 请求，不依赖浏览器或 Cookie。
+
+## 一眼看懂
+
+| 项目 | 说明 |
+| --- | --- |
+| 核心用途 | 使用站点访问令牌调用签到 API，不依赖浏览器或 Cookie |
+| 当前内置 | SheApi；站点定义集中在 `sites.json` |
+| 运行方式 | 手动运行，或使用 systemd timer 每天北京时间 09:15 执行 |
+| 凭证边界 | 令牌和用户 ID 只从环境变量读取，不进入仓库配置 |
+| 结果语义 | 成功/已签到返回 `0`；配置错误返回 `2`；站点失败返回 `1` |
+
+## 最快验证
+
+```bash
+python3 relay_checkin.py --list
+python3 relay_checkin.py --dry-run
+```
+
+> [!NOTE]
+> `--dry-run` 只校验站点配置和必需环境变量，不会发送签到请求。
+
 
 当前内置站点：
 
